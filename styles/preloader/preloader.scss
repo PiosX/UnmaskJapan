@@ -1,0 +1,15 @@
+.splash {
+	@extend %cover;
+	@extend %center;
+	flex-direction: column;
+	background: #d1d1d1;
+
+	// &__svg {
+	// }
+	&__counter {
+		margin-top: 3rem;
+		font-size: 2.5rem;
+		color: $redColor;
+	}
+	display: none;
+}

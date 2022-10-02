@@ -1,0 +1,206 @@
+.home {
+  @extend %cover;
+  overflow: hidden;
+  display: flex;
+  &__background {
+    position: absolute;
+    background-image: url('https://images.prismic.io/unmaskjapan/276f72e6-52f7-488e-a65d-980f98bc9c45_fuji.png?auto=compress,format');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    top: -15%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    opacity: 0.45;
+    z-index: -1;
+  }
+  &__jp {
+    width: 25%;
+    font-family: $enFont;
+
+    &__title {
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      left: 13%;
+      transform: translate(-50%, -50%) rotate(-90deg);
+      font-size: 12rem;
+      font-weight: bold;
+      &--shadow {
+        position: absolute;
+        text-align: center;
+        top: 56%;
+        left: 16.5%;
+        transform: translate(-50%, -50%) rotate(-90deg);
+        font-size: 12rem;
+        opacity: 0;
+
+        @include media('<=phone') {
+          visibility: hidden;
+        }
+      }
+
+      @include media('<=phone') {
+        position: relative;
+        left: 50%;
+        top: -160%;
+        transform: translate(-50%, -50%) rotate(0);
+        font-size: 14rem;
+      }
+    }
+
+    @include media('<=phone') {
+      width: 100%;
+    }
+  }
+  &__main {
+    width: 50%;
+    &__img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 40%;
+      z-index: 1;
+
+      @include media('<=phone') {
+        width: 80%;
+      }
+    }
+    &__scene {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 35vw;
+      height: 35vw;
+      background-color: #d9d9d9;
+      border-radius: 50%;
+
+      @include media('<=phone') {
+        width: 70vw;
+        height: 70vw;
+      }
+    }
+    &__name {
+      position: absolute;
+      left: 50%;
+      top: 95%;
+      transform: translate(-50%, -50%);
+      width: 25rem;
+      height: 7rem;
+      background-color: #cac7c0;
+      filter: blur(30px);
+
+      &__text {
+        position: absolute;
+        left: 50%;
+        top: 95%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 4rem;
+        cursor: pointer;
+        z-index: 1;
+        a {
+          text-decoration: none;
+          color: $redColor;
+        }
+
+        @include media('<=tablet') {
+          font-size: 10rem;
+          top: 90%;
+        }
+
+        @include media('<=phone') {
+          font-size: 12rem;
+          top: 90%;
+        }
+      }
+    }
+  }
+  &__en {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    &__title {
+      font-family: $enFont;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 16rem;
+      transform: rotate(90deg) translateY(-200%);
+      color: $redColor;
+      opacity: 0.5;
+
+      @include media('<=phone') {
+        transform: rotate(0);
+        visibility: hidden;
+      }
+    }
+  }
+
+  @include media('<=phone') {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.hh {
+  &__oni {
+    display: block;
+    &--sh {
+      display: block;
+    }
+  }
+  &__hannya {
+    display: none;
+    &--sh {
+      display: none;
+    }
+  }
+  &__menpo {
+    display: none;
+    &--sh {
+      display: none;
+    }
+  }
+  &__tengu {
+    display: none;
+    &--sh {
+      display: none;
+    }
+  }
+}
+
+.ht {
+  &__oni {
+    display: block;
+  }
+  &__hannya {
+    display: none;
+  }
+  &__menpo {
+    display: none;
+  }
+  &__tengu {
+    display: none;
+  }
+}
+
+.hhe {
+  &__oni {
+    display: block;
+  }
+  &__hannya {
+    display: none;
+  }
+  &__menpo {
+    display: none;
+  }
+  &__tengu {
+    display: none;
+  }
+}
