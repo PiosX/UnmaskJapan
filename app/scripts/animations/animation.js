@@ -98,10 +98,51 @@ export default class Animation {
   }
 
   heTitleAnim(title) {
+    GSAP.fromTo(
+      title,
+      { transform: 'rotate(90deg) translateY(-200%)' },
+      {
+        display: 'block',
+        transform: 'rotate(90deg) translateY(0)',
+        duration: 0.6,
+        delay: 2,
+      }
+    );
+  }
+
+  hjTitleAnimOut(title, titleS) {
     GSAP.to(title, {
-      transform: 'rotate(90deg) translateY(0)',
-      duration: 0.6,
-      delay: 2,
+      top: '180%',
+      duration: 1.5,
+    });
+    GSAP.to(titleS, {
+      top: '186%',
+      duration: 1.5,
+    });
+  }
+
+  heTitleAnimOut(title) {
+    GSAP.to(title, {
+      transform: 'rotate(90deg) translateY(450%)',
+      zIndex: -1,
+      display: 'none',
+    });
+  }
+
+  htTitleAnimIn(title) {
+    GSAP.to(title, {
+      display: 'block',
+      opacity: 1,
+      duration: 2,
+      delay: 1,
+    });
+  }
+
+  htTitleAnimOut(title) {
+    GSAP.to(title, {
+      opacity: 0,
+      duration: 0.5,
+      display: 'none',
     });
   }
 }
