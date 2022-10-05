@@ -19,6 +19,7 @@
     font-size: 5rem;
     text-transform: uppercase;
     padding-top: 4rem;
+    user-select: none;
 
     @include media('<=tablet') {
       position: relative;
@@ -41,6 +42,7 @@
       white-space: pre-line;
       color: $redColor;
       font-size: 12rem;
+      z-index: 2;
 
       @include media('<=phone') {
         font-size: 18rem;
@@ -55,6 +57,7 @@
       height: 37vw;
       background-color: #d9d9d9;
       border-radius: 50%;
+      z-index: 2;
 
       @include media('<=tablet') {
         width: 55vw;
@@ -79,6 +82,8 @@
         position: absolute;
         top: 120%;
         transform: translateY(-50%);
+        transition: top 1.5s, opacity 1.5s;
+        z-index: 2;
         &:nth-child(1) {
           top: 50%;
         }

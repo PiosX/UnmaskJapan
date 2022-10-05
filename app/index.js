@@ -1,5 +1,9 @@
 import Prehome from './scripts/pages/prehome';
 import Home from './scripts/pages/home';
+import Oni from './scripts/pages/oni';
+import Hannya from './scripts/pages/hannya';
+import Menpo from './scripts/pages/menpo';
+import Tengu from './scripts/pages/tengu';
 
 class App {
   constructor() {
@@ -12,6 +16,10 @@ class App {
   createPages() {
     this.prehome = new Prehome();
     this.home = new Home();
+    this.oni = new Oni();
+    this.hannya = new Hannya();
+    this.menpo = new Menpo();
+    this.tengu = new Tengu();
   }
 }
 

@@ -145,4 +145,23 @@ export default class Animation {
       display: 'none',
     });
   }
+
+  resetTextAnim(text) {
+    GSAP.to(text, {
+      top: '120%',
+      opacity: 0,
+    });
+  }
+
+  jpTitleAnimation(title) {
+    GSAP.fromTo(title, { top: '-50%' }, { top: '25%', duration: 1.5 });
+  }
+
+  enTitleAnimation(title) {
+    GSAP.fromTo(title, { opacity: 0 }, { opacity: 1, duration: 1.5 });
+  }
+
+  buttonAnim(button) {
+    GSAP.fromTo(button, { opacity: 0 }, { opacity: 1, duration: 1 });
+  }
 }
