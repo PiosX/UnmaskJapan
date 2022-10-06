@@ -41,3 +41,43 @@ body {
 .u-color {
   color: $redColor;
 }
+
+.inner__cursor {
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 10rem;
+  height: 10rem;
+  background-color: #000;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #000;
+  opacity: 0.8;
+  z-index: 1;
+  overflow: hidden;
+
+  &__after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    border-radius: 50%;
+    scale: 0;
+    background-color: $redColor;
+    transition: scale 0.4s;
+    z-index: 0;
+  }
+
+  &--text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
+    user-select: none;
+    z-index: 1;
+  }
+}

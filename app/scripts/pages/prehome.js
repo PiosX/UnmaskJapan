@@ -33,6 +33,8 @@ export default class Prehome extends Animation {
 
   addEvents() {
     if (this.prehome) {
+      this.divZen.style.opacity = 1;
+      this.divZen.style.zIndex = 2;
       window.addEventListener('wheel', () => {
         this.preTextAnim(this.t1, this.t2, this.t3, this.t4, this.t5);
       });

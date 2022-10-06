@@ -4,6 +4,9 @@ export default class Home extends Animation {
   constructor() {
     super();
     this.counter = 1;
+
+    this.cursor = document.querySelector('.inner__cursor');
+
     this.home = document.querySelector('.home');
     this.homeMask = document.querySelector('.home__mask');
     this.hZen = document.querySelector('.home__main__img');
