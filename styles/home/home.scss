@@ -68,7 +68,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       width: 40%;
-      z-index: 3;
+      z-index: 4;
 
       @include media('<=phone') {
         width: 80%;
@@ -84,6 +84,7 @@
       background-color: #d9d9d9;
       border-radius: 50%;
       z-index: 3;
+      overflow: hidden;
 
       @include media('<=phone') {
         width: 70vw;

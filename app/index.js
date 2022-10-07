@@ -4,6 +4,7 @@ import Oni from './scripts/pages/oni';
 import Hannya from './scripts/pages/hannya';
 import Menpo from './scripts/pages/menpo';
 import Tengu from './scripts/pages/tengu';
+import World from './scene/World';
 
 class App {
   constructor() {
@@ -11,12 +12,20 @@ class App {
     this.cursorAfter = document.querySelector('.inner__cursor__after');
     this.homeMask = document.querySelector('.home__mask');
     this.notCursor = document.querySelectorAll('.not-cursor');
+    this.container = document.querySelector('.home__main__scene');
     this.createPreloader();
     this.createPages();
     this.cursorUpdate();
     this.cursorEvents();
     this.cursorOver();
     this.cursorOut();
+    this.mainScene();
+  }
+
+  mainScene() {
+    this.world = new World(this.container);
+
+    this.world.render();
   }
 
   createPreloader() {}
