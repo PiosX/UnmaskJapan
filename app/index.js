@@ -25,7 +25,7 @@ class App {
   mainScene() {
     this.world = new World(this.container);
 
-    this.world.render();
+    this.world.start();
   }
 
   createPreloader() {}
