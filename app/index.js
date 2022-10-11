@@ -22,8 +22,10 @@ class App {
     this.mainScene();
   }
 
-  mainScene() {
+  async mainScene() {
     this.world = new World(this.container);
+
+    await this.world.init();
 
     this.world.start();
   }

@@ -1,5 +1,5 @@
+import { loadMasks } from './components/masks/masks.js';
 import { createCamera } from './components/camera.js';
-import { createCube } from './components/cube.js';
 import { createLights } from './components/lights.js';
 import { createScene } from './components/scene.js';
 
@@ -28,12 +28,11 @@ export default class World {
 
     // const controls = createControls(this.camera, renderer.domElement);
 
-    const cube = createCube();
     const { light, ambientLight } = createLights();
 
     // loop.updatables.push(controls);
 
-    scene.add(cube, light, ambientLight);
+    scene.add(light, ambientLight);
 
     this.camParallax();
 
@@ -41,6 +40,12 @@ export default class World {
     resizer.onResize = () => {
       this.render();
     };
+  }
+
+  async init() {
+    const { oni, hannya, menpo, tengu } = await loadMasks();
+
+    scene.add(oni, hannya, menpo, tengu);
   }
 
   camParallax() {

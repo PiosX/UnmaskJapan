@@ -99,10 +99,12 @@ module.exports = {
       },
 
       {
-        test: /\.(png|jpg|gif|jpe?g|svg|woff2?|fnt|webp|mp4)$/,
-        type: 'asset/resource',
-        generator: {
-          filename: '[name].[hash].[ext]',
+        test: /\.(jpe?g|png|gif|svg|woff2|fnt|webp|glb)$/,
+        loader: 'file-loader',
+        options: {
+          name(file) {
+            return '[hash].[ext]';
+          },
         },
       },
 
@@ -124,6 +126,12 @@ module.exports = {
       {
         test: /\.(glsl|frag|vert)$/,
         loader: 'glslify-loader',
+        exclude: /node_modules/,
+      },
+
+      {
+        test: /\.glb/,
+        type: 'asset/resource',
         exclude: /node_modules/,
       },
     ],
