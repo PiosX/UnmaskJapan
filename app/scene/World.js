@@ -9,7 +9,6 @@ import Resizer from './systems/resizer.js';
 import Loop from './systems/loop.js';
 
 let scene;
-
 let renderer;
 let loop;
 

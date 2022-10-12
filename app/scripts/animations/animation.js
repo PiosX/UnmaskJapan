@@ -123,7 +123,7 @@ export default class Animation {
 
   heTitleAnimOut(title) {
     GSAP.to(title, {
-      transform: 'rotate(90deg) translateY(450%)',
+      transform: 'rotate(90deg) translateY(-200%)',
       zIndex: -1,
       display: 'none',
     });

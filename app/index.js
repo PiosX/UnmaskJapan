@@ -13,6 +13,17 @@ class App {
     this.homeMask = document.querySelector('.home__mask');
     this.notCursor = document.querySelectorAll('.not-cursor');
     this.container = document.querySelector('.home__main__scene');
+    this.oniContainer = document.querySelector('.oni__content__scene');
+    this.hannyaContainer = document.querySelector('.hannya__content__scene');
+    this.menpoContainer = document.querySelector('.menpo__content__scene');
+    this.tenguContainer = document.querySelector('.tengu__content__scene');
+
+    this.pHome = document.querySelector('.home');
+    this.pOni = document.querySelector('.oni');
+    this.pHannya = document.querySelector('.hannya');
+    this.pMenpo = document.querySelector('.menpo');
+    this.pTengu = document.querySelector('.tengu');
+
     this.createPreloader();
     this.createPages();
     this.cursorUpdate();
@@ -23,11 +34,31 @@ class App {
   }
 
   async mainScene() {
-    this.world = new World(this.container);
-
-    await this.world.init();
-
-    this.world.start();
+    if (this.pHome) {
+      this.world = new World(this.container);
+      await this.world.init();
+      this.world.start();
+    }
+    if (this.pOni) {
+      this.oniWorld = new World(this.oniContainer);
+      await this.oniWorld.init();
+      this.oniWorld.start();
+    }
+    if (this.pHannya) {
+      this.hannyaWorld = new World(this.hannyaContainer);
+      await this.hannyaWorld.init();
+      this.hannyaWorld.start();
+    }
+    if (this.pMenpo) {
+      this.menpoWorld = new World(this.menpoContainer);
+      await this.menpoWorld.init();
+      this.menpoWorld.start();
+    }
+    if (this.pTengu) {
+      this.tenguWorld = new World(this.tenguContainer);
+      await this.tenguWorld.init();
+      this.tenguWorld.start();
+    }
   }
 
   createPreloader() {}
