@@ -1,3 +1,7 @@
+body {
+  overflow: hidden;
+}
+
 .prehome {
   @extend %cover;
   overflow: hidden;

@@ -55,6 +55,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "@barba/core": "^2.9.7",
     "@prismicio/client": "^6.1.1",
     "@prismicio/helpers": "^2.0.1",
     "body-parser": "^1.19.0",

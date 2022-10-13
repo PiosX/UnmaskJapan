@@ -164,4 +164,10 @@ export default class Animation {
   buttonAnim(button) {
     GSAP.fromTo(button, { opacity: 0 }, { opacity: 1, duration: 1 });
   }
+
+  blinkAnim(text) {
+    const tl = GSAP.timeline();
+
+    tl.to(text, { opacity: 0.4, duration: 0.6, repeat: -1, yoyo: 'true' });
+  }
 }
