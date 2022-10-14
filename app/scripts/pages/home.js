@@ -38,10 +38,15 @@ export default class Home extends Animation {
 
   animations() {
     this.hZenAnim(this.hZen);
-    this.hjTitleAnimF(this.hjTitleOni);
     this.hjTitleAnimS(this.hjTitleOniS);
     this.heTitleAnim(this.heTitleOni);
     this.htTitleAnimIn(this.htTitleOni);
+
+    if (window.innerWidth <= 768) {
+      this.hjTitleAnimFMobile(this.hjTitleOni);
+    } else {
+      this.hjTitleAnimF(this.hjTitleOni);
+    }
   }
 
   addEvents() {
@@ -51,14 +56,23 @@ export default class Home extends Animation {
           if (this.counter === 1) {
             this.homeMask.style.display = 'none';
 
-            this.homeMask.style.display = this.hjTitleAnimOut(
-              this.hjTitleOni,
-              this.hjTitleOniS
-            );
+            if (window.innerWidth <= 768) {
+              this.hjTitleAnimOutMobile(this.hjTitleOni);
+            } else {
+              this.homeMask.style.display = this.hjTitleAnimOut(
+                this.hjTitleOni,
+                this.hjTitleOniS
+              );
+            }
+
             this.heTitleAnimOut(this.heTitleOni);
             this.htTitleAnimOut(this.htTitleOni);
 
-            this.hjTitleAnimF(this.hjTitleHannya);
+            if (window.innerWidth <= 768) {
+              this.hjTitleAnimFMobile(this.hjTitleHannya);
+            } else {
+              this.hjTitleAnimF(this.hjTitleHannya);
+            }
             this.hjTitleAnimS(this.hjTitleHannyaS);
             this.htTitleAnimIn(this.htTitleHannya);
             this.heTitleAnim(this.heTitleHannya);
@@ -72,11 +86,22 @@ export default class Home extends Animation {
           if (this.counter === 2) {
             this.homeMask.style.display = 'none';
 
-            this.hjTitleAnimOut(this.hjTitleHannya, this.hjTitleHannyaS);
+            if (window.innerWidth <= 768) {
+              this.hjTitleAnimOutMobile(this.hjTitleHannya);
+            } else {
+              this.homeMask.style.display = this.hjTitleAnimOut(
+                this.hjTitleHannya,
+                this.hjTitleHannyaS
+              );
+            }
             this.heTitleAnimOut(this.heTitleHannya);
             this.htTitleAnimOut(this.htTitleHannya);
 
-            this.hjTitleAnimF(this.hjTitleMenpo);
+            if (window.innerWidth <= 768) {
+              this.hjTitleAnimFMobile(this.hjTitleMenpo);
+            } else {
+              this.hjTitleAnimF(this.hjTitleMenpo);
+            }
             this.hjTitleAnimS(this.hjTitleMenpoS);
             this.htTitleAnimIn(this.htTitleMenpo);
             this.heTitleAnim(this.heTitleMenpo);
@@ -89,12 +114,23 @@ export default class Home extends Animation {
           }
           if (this.counter === 3) {
             this.homeMask.style.display = 'none';
+            if (window.innerWidth <= 768) {
+              this.hjTitleAnimOutMobile(this.hjTitleMenpo);
+            } else {
+              this.homeMask.style.display = this.hjTitleAnimOut(
+                this.hjTitleMenpo,
+                this.hjTitleMenpoS
+              );
+            }
 
-            this.hjTitleAnimOut(this.hjTitleMenpo, this.hjTitleMenpoS);
             this.heTitleAnimOut(this.heTitleMenpo);
             this.htTitleAnimOut(this.htTitleMenpo);
 
-            this.hjTitleAnimF(this.hjTitleTengu);
+            if (window.innerWidth <= 768) {
+              this.hjTitleAnimFMobile(this.hjTitleTengu);
+            } else {
+              this.hjTitleAnimF(this.hjTitleTengu);
+            }
             this.hjTitleAnimS(this.hjTitleTenguS);
             this.htTitleAnimIn(this.htTitleTengu);
             this.heTitleAnim(this.heTitleTengu);
@@ -108,11 +144,22 @@ export default class Home extends Animation {
           if (this.counter === 4) {
             this.homeMask.style.display = 'none';
 
-            this.hjTitleAnimOut(this.hjTitleTengu, this.hjTitleTenguS);
+            if (window.innerWidth <= 768) {
+              this.hjTitleAnimOutMobile(this.hjTitleTengu);
+            } else {
+              this.homeMask.style.display = this.hjTitleAnimOut(
+                this.hjTitleTengu,
+                this.hjTitleTenguS
+              );
+            }
             this.heTitleAnimOut(this.heTitleTengu);
             this.htTitleAnimOut(this.htTitleTengu);
 
-            this.hjTitleAnimF(this.hjTitleOni);
+            if (window.innerWidth <= 768) {
+              this.hjTitleAnimFMobile(this.hjTitleOni);
+            } else {
+              this.hjTitleAnimF(this.hjTitleOni);
+            }
             this.hjTitleAnimS(this.hjTitleOniS);
             this.htTitleAnimIn(this.htTitleOni);
             this.heTitleAnim(this.heTitleOni);

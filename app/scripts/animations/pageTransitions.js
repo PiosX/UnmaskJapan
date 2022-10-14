@@ -7,7 +7,7 @@ export default class PageTransitions {
       { transform: `translateY(0)`, transformOrigin: 'bottom' },
       {
         transformOrigin: 'bottom',
-        duration: 2,
+        duration: 1,
         transform: `translateY(100%)`,
         delay: 1,
         display: 'none',

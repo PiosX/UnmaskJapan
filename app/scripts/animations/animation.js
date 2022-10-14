@@ -84,8 +84,16 @@ export default class Animation {
   hjTitleAnimF(title) {
     GSAP.fromTo(
       title,
-      { top: '-200%' },
+      { top: '-500%' },
       { top: '50%', duration: 1.5, delay: 0.5 }
+    );
+  }
+
+  hjTitleAnimFMobile(title) {
+    GSAP.fromTo(
+      title,
+      { top: '-500%', opacity: 0 },
+      { top: '10%', opacity: 1, duration: 1.5, delay: 0.5 }
     );
   }
 
@@ -118,6 +126,14 @@ export default class Animation {
     GSAP.to(titleS, {
       top: '186%',
       duration: 1.5,
+    });
+  }
+
+  hjTitleAnimOutMobile(title) {
+    GSAP.to(title, {
+      top: '180%',
+      opacity: 0,
+      duration: 1,
     });
   }
 

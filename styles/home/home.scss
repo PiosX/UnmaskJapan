@@ -33,6 +33,15 @@
       transform: translate(-50%, -50%) rotate(-90deg);
       font-size: 12rem;
       font-weight: bold;
+
+      @include media('<=phone') {
+        position: absolute;
+        left: 50%;
+        top: 10%;
+        transform: translate(-50%, -50%) rotate(0);
+        font-size: 14rem;
+      }
+
       &--shadow {
         position: absolute;
         text-align: center;
@@ -45,14 +54,6 @@
         @include media('<=phone') {
           visibility: hidden;
         }
-      }
-
-      @include media('<=phone') {
-        position: relative;
-        left: 50%;
-        top: -160%;
-        transform: translate(-50%, -50%) rotate(0);
-        font-size: 14rem;
       }
     }
 
@@ -163,25 +164,25 @@
 
 .hh {
   &__oni {
-    top: -200%;
+    top: -500%;
     &--sh {
       display: block;
     }
   }
   &__hannya {
-    top: -200%;
+    top: -500%;
     &--sh {
       display: block;
     }
   }
   &__menpo {
-    top: -200%;
+    top: -500%;
     &--sh {
       display: block;
     }
   }
   &__tengu {
-    top: -200%;
+    top: -500%;
     &--sh {
       display: block;
     }
